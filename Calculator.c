@@ -1,42 +1,47 @@
-#include <stdio.h>
-
-int main() {
+#include<stdio.h>
+int main()
+{
+    int num1,num2, result;
     char operator;
-    double num1, num2, result;
-
-    printf("Enter an operator (+, -, *, /): ");
+    printf("Enter the operation to be performed (+,-,*,/)");
     scanf("%c", &operator);
+    printf("enter the first number:");
+    scanf("%d",&num1);
+    printf("enter the second number:");
+    scanf("%d",&num2);
 
-    printf("Enter two numbers separated by a space: ");
-    scanf("%lf %lf", &num1, &num2);
-
-    switch (operator) {
+    switch (operator){
         case '+':
-            result = num1 + num2;
-            printf("%.2lf + %.2lf = %.2lf\n", num1, num2, result);
-            break;
+        result=num1+num2;
+        printf("The sum of %d and %d is %d",num1,num2,result);
+        break;
 
         case '-':
-            result = num1 - num2;
-            printf("%.2lf - %.2lf = %.2lf\n", num1, num2, result);
-            break;
+        result=num1-num2;
+        printf("the difference of %d and %d is %d",num1,num2,result);
+        break;
 
         case '*':
-            result = num1 * num2;
-            printf("%.2lf * %.2lf = %.2lf\n", num1, num2, result);
-            break;
+        result=num1*num2;
+        printf("the product of %d and %d is %d",num1,num2,result);
+        break;
 
         case '/':
-    
-            if (num2 != 0.0) {
-                result = num1 / num2;
-                printf("%.2lf / %.2lf = %.2lf\n", num1, num2, result);
-            } else {
-                printf("Error! Division by zero is not allowed.\n");
-            }
+
+        if(num2!=0){
+            result=num1/num2;
+            printf("the quotient after dividing %d by %d is %d",num1,num2,result);
             break;
-        default:
-            printf("Error! Invalid operator entered.\n");
+        }
+        else
+        {
+            printf("Cannot divide by 0");
+            break;
+        }
+
+        default :
+        printf("invalid operator entered......");
+        break;
     }
     return 0;
 }

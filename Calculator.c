@@ -40,7 +40,7 @@ int main()
         }
 
         default :
-        printf("invalid operator entered......");
+        printf("invalid operator entered........");
         break;
     }
     return 0;

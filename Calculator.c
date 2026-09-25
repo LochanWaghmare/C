@@ -30,7 +30,7 @@ int main()
 
         if(num2!=0){
             result=num1/num2;
-            printf("the quotient after dividing %d by %d is %d",num1,num2,result);
+            printf("The quotient after dividing %d by %d is %d",num1,num2,result);
             break;
         }
         else
